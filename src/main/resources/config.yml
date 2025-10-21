@@ -1,0 +1,5 @@
+# MTeamsReloaded configuration
+# Keeping this simple for now; more options coming later.
+
+max-members-per-team: 100
+allow-team-rename: false

@@ -1,8 +1,47 @@
 name: MTeamsReloaded
-version: '1.0'
-main: com.exemple.MTeamsReloaded
+version: '1.1'
+main: com.exemple.MTeamsReloaded.MTeamsReloaded
 api-version: '1.21'
-prefix: REPORT-GUI
+prefix: MTR
 load: STARTUP
 authors: [ Mike4947 ]
-description: A report plugin with a simple GUI
+description: Simple and Interactive Team Plugin for your Minecraft Server
+
+commands:
+  team:
+    description: Open teams GUI or manage teams (/team create <name>, /team manage)
+    usage: /team | /team create <name> | /team manage
+    aliases: [teams]
+  tr:
+    description: Admin commands for MTeamsReloaded
+    usage: /tr help|reload|admin
+    aliases: [mtr, mteams]
+
+permissions:
+  mteams.gui:
+    description: Allows opening the teams GUI (/team)
+    default: true
+  mteams.create:
+    description: Allows creating teams (/team create <name>)
+    default: op
+  mteams.manage:
+    description: Allows opening the manage menu and disbanding teams
+    default: op
+  mteams.reload:
+    description: Allows reloading plugin config (/tr reload)
+    default: op
+  mteams.admin:
+    description: Admin abilities for teams (/tr admin)
+    default: op
+  mteams.invite:
+    description: Allows inviting players to a team
+    default: op
+  mteams.promote:
+    description: Allows promoting a team member to officer
+    default: op
+  mteams.demote:
+    description: Allows demoting an officer
+    default: op
+  mteams.kick:
+    description: Allows kicking members from the team
+    default: op
